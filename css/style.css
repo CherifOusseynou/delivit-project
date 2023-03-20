@@ -227,7 +227,6 @@ a:hover,
     width: 100%;
     height: auto;
     padding-bottom: 20rem;
-
 }
 #particles-js{
     position: absolute;
@@ -235,7 +234,6 @@ a:hover,
     height: 100%;
 }
 .button-main .main-btn{
- 
     color: var(--white-color);
     background-color: transparent;
     border-radius: 6rem;
@@ -243,16 +241,17 @@ a:hover,
     font-family: var(--secondary-font);
     font-weight: 700;
     font-size: 1.9rem;
-    margin-top: 0.1rem;
+    margin-top: 0.8rem;
     transition: all .3s linear;
     box-shadow: 0 1.063rem 0.8rem rgba(0,0,0,.3); 
 }
 .button-main .main-btn:hover{
     background-color: var(--secondary-color);
     color: var(--white-color);
-    
 }
-/*.col-lg-6 mb-6 order-lg-1 order-1{
+
+/*
+.col-lg-6 mb-6 order-lg-1 order-1{
     margin-right: 5rem;
 }
 /* Banner CSS Exit*/
@@ -1021,3 +1020,133 @@ a:hover,
     margin: 5%;
     white-space: normal;
 }
+
+
+
+/**testimonials*/
+
+
+.slider-contain .card {
+    background: linear-gradient(to bottom, #fff, #fff);
+    animation: background-color 5s;
+    min-height: 0vh;
+    margin-top: 5px;
+}
+
+@keyframes background-color {
+    0% {
+        background: linear-gradient(to bottom, #16DAB7, #16DAB7);
+    }
+
+    25% {
+        background: linear-gradient(135deg, #fff, #fff);
+    }
+
+    50% {
+        background: linear-gradient(to bottom, #4793a6, #000000);
+    }
+
+    100% {
+        background: linear-gradient(-135deg, #16DAB7, #16DAB7, #16DAB7);
+    }
+
+}
+
+.slider-contain {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container .col-lg-4 {
+    display: flex;
+    justify-content: center;
+}
+.card {
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+    border: none;
+    background-color: inherit;
+}
+
+.card .face {
+    position: absolute;
+    color: #000;
+
+    font-size: 18px;
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+
+    background: rgba(255, 255, 255, 0.06);
+    transform-style: preserve-3d;
+    transition: 0.5s;
+
+    backface-visibility: hidden;
+    border-top: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+    /* border-right: 1px solid #999;
+border-bottom: 1px solid #999; */
+}
+
+.card .face.front-face,
+.card .face.back-face {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .face.front-face .profile {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.card .face.front-face .name {
+    letter-spacing: 2px;
+}
+
+.card .face.front-face .designation {
+    font-size: 1.5rem;
+    color: #000;
+    letter-spacing: 0.8px;
+}
+
+.card:hover .face.front-face {
+    transform: rotateY(180deg);
+}
+
+.card .face.back-face {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.06);
+    transform: rotateY(180deg);
+    padding: 20px 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.card .face.back-face .fa-quote-left {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    font-size: 1.2rem;
+}
+
+.card .face.back-face .fa-quote-right {
+    position: absolute;
+    bottom: 35px;
+    right: 25px;
+    font-size: 1.2rem;
+}
+
+.card:hover .face.back-face {
+    transform: rotateY(360deg);
+}
+ 
